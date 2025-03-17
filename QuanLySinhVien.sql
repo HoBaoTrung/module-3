@@ -82,4 +82,22 @@ select * from subject where credit < 10;
  select S.StudentId, S.StudentName, Sub.subname,  M.Mark FROM Student S join Mark M on  S.StudentId = M.StudentId 
  join subject Sub on M.subId = Sub.subId
  where sub.subname = 'CF';
- 
+
+-- [Bài tập] Truy vấn dữ liệu với CSDL Quản lý sinh viên
+-- Hiển thị tất cả các sinh viên có tên bắt đầu bảng ký tự ‘h’
+select * from student where StudentName like('h%'); 
+-- Hiển thị các thông tin lớp học có thời gian bắt đầu vào tháng 12.
+select * from class where month(startDate) = 12;
+-- Hiển thị tất cả các thông tin môn học có credit trong khoảng từ 3-5.
+select * from subject where credit between 3 and 5;
+-- Thay đổi mã lớp(ClassID) của sinh viên có tên ‘Hung’ thành 2.
+SELECT StudentID INTO @StudentID
+FROM Student
+WHERE studentName = 'Hung'
+LIMIT 1;
+UPDATE Student SET ClassID = 2 WHERE studentID = @StudentID;
+
+-- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.
+select S.StudentName, Sub.SubName, M.Mark from Student S join Mark M on S.StudentID = M.StudentID
+join Subject Sub on Sub.SubID = M.SubID
+order by M.Mark desc , S.StudentName;
