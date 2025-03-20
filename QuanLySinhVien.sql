@@ -98,6 +98,26 @@ LIMIT 1;
 UPDATE Student SET ClassID = 2 WHERE studentID = @StudentID;
 
 -- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.
-select S.StudentName, Sub.SubName, M.Mark from Student S join Mark M on S.StudentID = M.StudentID
+select S.StudentName, Sub.SubName, M.Mark from Student S 
+join Mark M on S.StudentID = M.StudentID
 join Subject Sub on Sub.SubID = M.SubID
 order by M.Mark desc , S.StudentName;
+
+-- [Thực hành] Sử dụng các hàm thông dụng trong SQL
+-- Hiển thị số lượng sinh viên ở từng nơi
+select S.Address, count(*) as 'So luong' from student S group by S.Address; 
+
+-- Tính điểm trung bình các môn học của mỗi học viên
+select S.studentName, avg(M.mark) as 'Diem trung binh' from student S 
+join mark M on M.studentID = S.studentID
+group by M.studentID;
+
+-- Hiển thị những bạn học viên co điểm trung bình các môn học lớn hơn 15
+select S.studentName, avg(M.mark) as 'Diem trung binh' from student S 
+join mark M on M.studentID = S.studentID
+group by M.studentID having avg(M.mark) > 15;
+
+-- Hiển thị thông tin các học viên có điểm trung bình lớn nhất.
+select S.studentName, avg(M.mark) as 'Diem trung binh' from student S 
+join mark M on M.studentID = S.studentID
+group by M.studentID having avg(M.mark) >= ALL (SELECT AVG(Mark) FROM Mark GROUP BY Mark.StudentId);
