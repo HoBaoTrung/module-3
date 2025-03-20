@@ -121,3 +121,18 @@ group by M.studentID having avg(M.mark) > 15;
 select S.studentName, avg(M.mark) as 'Diem trung binh' from student S 
 join mark M on M.studentID = S.studentID
 group by M.studentID having avg(M.mark) >= ALL (SELECT AVG(Mark) FROM Mark GROUP BY Mark.StudentId);
+
+-- [Bài tập] Luyện tập các hàm thông dụng trong SQL
+-- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
+select * from subject where credit = (SELECT MAX(credit) FROM subject);
+
+-- Hiển thị các thông tin môn học có điểm thi lớn nhất.
+select SB.*, M.mark from subject SB
+join Mark M on SB.SubId = M.SubId 
+where M.mark = (SELECT MAX(mark) FROM Mark);
+
+-- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
+select s.*, avg(m.mark)  as 'Diem trung binh' from Student s
+join Mark m on m.studentId = s.studentId
+group by m.studentId
+order by avg(m.mark) desc;
