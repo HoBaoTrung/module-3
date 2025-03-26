@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truyện Dài Kỳ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <!-- Bước 4: Ảnh truyện ở đầu trang -->
+    <div class="story-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeG2wG-jIwO6crE9mzw6jGFC02CmDrSamYhg&s"
+             alt="Ảnh Truyện">
+    </div>
+
+    <!-- Bước 1: Tạo mục lục truyện -->
+    <!-- Thanh mục lục cố định bên trái -->
+    <div class="sidebar">
+        <h2>Mục Lục Truyện</h2>
+        <div class="table-of-contents">
+            <h5><a href="#chapter1">Chương 1: Hành Trình Bắt Đầu</a></h5>
+            <h5><a href="#chapter2">Chương 2: Bí Ẩn Trong Rừng Sâu</a></h5>
+            <h5><a href="#chapter3">Chương 3: Cuộc Gặp Gỡ Định Mệnh</a></h5>
+            <h5><a href="#chapter4">Chương 4: Trận Chiến Đỉnh Cao</a></h5>
+        </div>
+    </div>
+
+    <!-- Bước 2: Tạo nội dung ứng với từng mục lục -->
+    <!-- Nội dung chính -->
+    <div class="main-content">
+        <div class="content">
+            <div id="chapter1" class="chapter">
+                <h3>Chương 1: Hành Trình Bắt Đầu</h3>
+                <p>
+                    Ngày xửa ngày xưa, trong một ngôi làng nhỏ nằm bên bìa rừng, có một chàng trai trẻ tên là Nam. Nam
+                    luôn
+                    mơ ước được khám phá thế giới bên ngoài ngôi làng của mình. Một ngày nọ, anh quyết định rời khỏi
+                    nhà,
+                    mang theo một chiếc ba lô nhỏ và một thanh kiếm cũ kỹ mà cha anh để lại. Hành trình của Nam bắt đầu
+                    từ
+                    đây, nhưng anh không hề biết rằng những thử thách lớn đang chờ đợi phía trước.
+                </p>
+            </div>
+
+            <div id="chapter2" class="chapter">
+                <h3>Chương 2: Bí Ẩn Trong Rừng Sâu</h3>
+                <p>
+                    Sau nhiều ngày đi bộ, Nam tiến vào một khu rừng rậm rạp, nơi ánh sáng mặt trời hầu như không thể
+                    xuyên
+                    qua những tán lá dày đặc. Anh nghe thấy những âm thanh kỳ lạ phát ra từ sâu trong rừng. Tò mò, Nam
+                    quyết
+                    định đi theo âm thanh đó và phát hiện ra một ngôi đền cổ bị bỏ hoang. Bên trong ngôi đền, anh tìm
+                    thấy
+                    một chiếc hộp nhỏ được khắc những ký tự kỳ lạ.
+                </p>
+            </div>
+
+            <div id="chapter3" class="chapter">
+                <h3>Chương 3: Cuộc Gặp Gỡ Định Mệnh</h3>
+                <p>
+                    Khi Nam đang cố gắng mở chiếc hộp, một cô gái bí ẩn xuất hiện. Cô tự xưng là Linh, một người bảo vệ
+                    ngôi
+                    đền. Linh cảnh báo Nam rằng chiếc hộp chứa đựng một sức mạnh nguy hiểm có thể hủy diệt cả thế giới
+                    nếu
+                    rơi vào tay kẻ xấu. Nam và Linh quyết định hợp tác để bảo vệ chiếc hộp và tìm hiểu thêm về bí mật
+                    của
+                    nó.
+                </p>
+            </div>
+
+            <div id="chapter4" class="chapter">
+                <h3>Chương 4: Trận Chiến Đỉnh Cao</h3>
+                <p>
+                    Trên đường đi, Nam và Linh bị một nhóm kẻ thù tấn công. Chúng là những kẻ săn kho báu, muốn chiếm
+                    lấy
+                    chiếc hộp để sử dụng sức mạnh của nó. Một trận chiến ác liệt diễn ra. Nam sử dụng thanh kiếm của
+                    mình,
+                    còn Linh dùng phép thuật để chống lại kẻ thù. Cuối cùng, họ đã chiến thắng, nhưng cả hai đều nhận ra
+                    rằng cuộc chiến này chỉ là khởi đầu cho những thử thách lớn hơn.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JavaScript để cuộn mượt -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
