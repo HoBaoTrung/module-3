@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Thanh điều hướng trên cùng */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-left: auto;
+    border-radius: 5px;
+}
+
+/* Container chính */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Thanh bên trái */
+.sidebar {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Nội dung chính */
+.main-content {
+    flex: 3;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.main-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content-box {
+    margin-bottom: 20px;
+}
+
+/* Thanh bên phải (Quảng cáo) */
+.ads {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+}
+
+.ad-box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, .main-content, .ads {
+        flex: 1;
+        min-width: 100%;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .login-btn {
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
