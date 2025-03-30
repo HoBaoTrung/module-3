@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao diện Phim Hoạt Hình</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">PHIMHOATHINH</div>
+    </header>
+
+    <!-- Head-link -->
+    <nav class="head-link">
+        <ul>
+            <li><a href="#" class="active">Phim hoạt hình</a></li>
+            <li><a href="#">Phim hoạt hình yêu thích</a></li>
+            <li><a href="#">Nhạc vật hoạt hình</a></li>
+            <li><a href="#">Góp ý</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Left Content (Menu) -->
+        <div class="left-content">
+            <div class="video-item active" onclick="showVideo(0)">
+                <img src="https://img.youtube.com/vi/EGoE47R1rYM/default.jpg" alt="Thumbnail">
+                <div class="video-info">
+                    <h4>WELCOME ĐẾN VỚI KHÁCH SẠN NOBI</h4>
+                    <p>CHANNEL FUN</p>
+                    <p>5,147,528 lượt xem</p>
+                </div>
+            </div>
+            <div class="video-item" onclick="showVideo(1)">
+                <img src="https://img.youtube.com/vi/zFEF1v8FHjw/default.jpg" alt="Thumbnail">
+                <div class="video-info">
+                    <h4>SUNEO KHÔNG LỒ</h4>
+                    <p>DOREAMON VIETSUB</p>
+                    <p>5,147,528 lượt xem</p>
+                </div>
+            </div>
+            <div class="video-item" onclick="showVideo(2)">
+                <img src="https://img.youtube.com/vi/LWynmImBloM/default.jpg" alt="Thumbnail">
+                <div class="video-info">
+                    <h4>CÒI ĐIỂU KHIỂN VẬT</h4>
+                    <p>DOREAMON VIETSUB</p>
+                    <p>5,147,528 lượt xem</p>
+                </div>
+            </div>
+            <div class="video-item" onclick="showVideo(3)">
+                <img src="https://img.youtube.com/vi/RuzUmZwIdvE/default.jpg" alt="Thumbnail">
+                <div class="video-info">
+                    <h4>CHIẾC MÁY TẠO KẸO BÔNG</h4>
+                    <p>DOREAMON VIETSUB</p>
+                    <p>5,147,528 lượt xem</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Content (Video chính) -->
+        <div class="right-content">
+            <div class="video-content" id="video-0">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EGoE47R1rYM?si=tgJ8qID7Iwf-mV7l"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h2>DOREAMON EP 430 - TÔI LÀ MARI ĐÂY & GẬY DI CHUYỂN</h2>
+                <h3>Cho con bất ngờ</h3>
+                <p>CHANNEL FUN • 5,147,528 lượt xem</p>
+                <p>
+                    Bộ phim kể về câu chuyện Thạch Sanh chếm Trăn Tình của dân, bản Đại Bàng của cộng
+                    chùa, dùng thiên làm nhân nghịa để tan quán chăm nghịa của thằng. Nhung cuộc đó Thạch Sanh lúc
+                    bên tới Lý Thông làm cho điều dịng. Cuối cùng chính nghịa đã thắng. Mời các bạn cùng xem và cảm
+                    nhận.
+                </p>
+            </div>
+            <div class="video-content" id="video-1" style="display: none;">
+                <div class="video-wrapper">
+                    <iframe width="866" height="487" src="https://www.youtube.com/embed/zFEF1v8FHjw"
+                            title="[S8] Doraemon Tập 411 - Suneo Khổng Lồ Xuất Hiện, Nhà Vô Địch Ngủ Ngày - Hoạt Hình Tiếng Việt"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h2>SUNEO KHÔNG LỒ</h2>
+                <h3>Video 2</h3>
+                <p>DOREAMON VIETSUB • 5,147,528 lượt xem</p>
+                <p>
+                    Đây là nội dung của video Suneo Không Lồ. Mời các bạn cùng xem và cảm nhận.
+                </p>
+            </div>
+            <div class="video-content" id="video-2" style="display: none;">
+                <div class="video-wrapper">
+                    <iframe width="866" height="487" src="https://www.youtube.com/embed/LWynmImBloM"
+                            title="Review Phim Doraemon Tập: Còi Tập Hợp Đồng Điệu." frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h2>CÒI ĐIỂU KHIỂN VẬT</h2>
+                <h3>Video 3</h3>
+                <p>DOREAMON VIETSUB • 5,147,528 lượt xem</p>
+                <p>
+                    Đây là nội dung của video CÒI ĐIỂU KHIỂN VẬT. Mời các bạn cùng xem và cảm nhận.
+                </p>
+            </div>
+            <div class="video-content" id="video-3" style="display: none;">
+                <div class="video-wrapper">
+                    <iframe width="866" height="487" src="https://www.youtube.com/embed/RuzUmZwIdvE"
+                            title="Máy tạo mây tạo kẹo bông Doremon thuyết minh" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h2>CHIẾC MÁY TẠO KẸO BÔNG</h2>
+                <h3>Video 4</h3>
+                <p>DOREAMON VIETSUB • 5,147,528 lượt xem</p>
+                <p>
+                    Đây là nội dung của video Chiếc Máy Tạo Kẹo Bông. Mời các bạn cùng xem và cảm nhận.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2017 - Thiết kế web bởi hoathinhvn.net</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
