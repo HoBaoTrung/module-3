@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body {
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .gallery-item {
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      padding-top: 75%; /* 4:3 Aspect Ratio */
+      overflow: hidden;
+    }
+
+    .gallery-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.05);
+    }
+
+    .gallery-caption {
+      padding: 15px;
+      text-align: center;
+      flex-grow: 1;
+      background-color: white;
+    }
+
+    .gallery-caption h3 {
+      margin-bottom: 5px;
+      color: #333;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .gallery-caption p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 576px) {
+      .col-12 {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .gallery-caption h3 {
+        font-size: 1rem;
+      }
+
+      .gallery-caption p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center my-4">Photo Gallery</h1>
+
+  <div class="row g-4">
+    <!-- Gallery Item 1 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="gallery-item">
+        <div class="image-container">
+          <img src="https://th.bing.com/th/id/OIP.3nqTqWEd4DI8CPr_JdxayAHaEo?w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Nature" class="gallery-image">
+        </div>
+        <div class="gallery-caption">
+          <h3>Beautiful Nature</h3>
+          <p>Scenic view of mountains and lake</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 2 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="gallery-item">
+        <div class="image-container">
+          <img src="https://www.bing.com/th/id/OIP.Hz48D851gibPmXZF86SDoQHaE5?w=183&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="City" class="gallery-image">
+        </div>
+        <div class="gallery-caption">
+          <h3>Urban Landscape</h3>
+          <p>City skyline at dusk</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 3 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="gallery-item">
+        <div class="image-container">
+          <img src="https://th.bing.com/th/id/OIP.Vt3kGu4X6WQlmH91GpJpzgHaFH?w=300&h=207&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Beach" class="gallery-image">
+        </div>
+        <div class="gallery-caption">
+          <h3>Tropical Beach</h3>
+          <p>White sand and palm trees</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 4 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="gallery-item">
+        <div class="image-container">
+          <img src="https://th.bing.com/th/id/OIP.Q8v_2oNb1QKV8PWmqN91zAHaG1?w=190&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Wildlife" class="gallery-image">
+        </div>
+        <div class="gallery-caption">
+          <h3>Wildlife</h3>
+          <p>Elephant in the wild</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 5 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="gallery-item">
+        <div class="image-container">
+          <img src="https://th.bing.com/th/id/OSK.HEROMrvT0vzpDIOYbCCJKTkIEGz_hFGyJeQZa9mX8EunAbE?w=472&h=280&c=1&rs=2&o=6&dpr=1.3&pid=SANGAM" alt="Architecture" class="gallery-image">
+        </div>
+        <div class="gallery-caption">
+          <h3>Modern Architecture</h3>
+          <p>Innovative building design</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 6 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="gallery-item">
+        <div class="image-container">
+          <img src="https://th.bing.com/th/id/OIP.1v59QvCHxUKcPVjH0BnaiwHaE8?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Food" class="gallery-image">
+        </div>
+        <div class="gallery-caption">
+          <h3>Gourmet Food</h3>
+          <p>Delicious cuisine presentation</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 7 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="gallery-item">
+        <div class="image-container">
+          <img src="https://th.bing.com/th/id/OIP.uMBtaqPTDp8xEuowQHcpTQHaFj?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Travel" class="gallery-image">
+        </div>
+        <div class="gallery-caption">
+          <h3>Travel Adventure</h3>
+          <p>Exploring new destinations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 8 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="gallery-item">
+        <div class="image-container">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.WN2LLwUj5KVHqrMB7qhqVAHaFJ&rs=1&pid=ImgDetMain" alt="Art" class="gallery-image">
+        </div>
+        <div class="gallery-caption">
+          <h3>Street Art</h3>
+          <p>Colorful urban murals</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
