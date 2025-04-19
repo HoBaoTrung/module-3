@@ -11,6 +11,17 @@
     <h2>
         <a href="/users?action=create">Add New User</a>
     </h2>
+
+
+        <form>
+            <select name="action">
+                <option value="searchByCountry">Quốc gia</option>
+                <option value="searchByName">Tên</option>
+            </select>
+            <input name="keySearch" type="text">
+            <input type="submit">
+        </form>
+
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
